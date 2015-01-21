@@ -1,0 +1,758 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+
+@font-face {
+  font-family: Kiro-regular-web;
+  src: url('./css/kiro-regular-webfont-webfont.eot') format('embedded-opentype'), 
+         url('./css/kiro-regular-webfont-webfont.woff') format('woff'), 
+         url('./css/kiro-regular-webfont-webfont.ttf')  format('truetype'),
+         url('./css/kiro-regular-webfont-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: Lato-Light;
+  src: url('./css/Lato-Light.ttf');
+}
+
+body {
+  background-color: #1A1A1A;
+  font-family: Kiro-regular-web,Helvetica Neue,Arial;
+  text-shadow: 1px 1px #000000;
+  margin: 0px auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.accordion {
+    font-family:Kiro-regular-web,Helvetica Neue,Arial;
+    margin:0px auto 0px 15%;
+    font-size:14px;
+    width:70%;
+    padding:10px;
+}
+.accordion ul {
+    list-style:none;
+    margin:0;
+    padding:0;    
+}
+.accordion li {
+    margin:0;
+    padding:0;
+}
+.accordion [type=checkbox] {
+    display:none;
+}
+
+.accordion label {
+    display:block;
+    font-size:20px;
+    line-height:20px;
+    color:#FFFFFF;
+    font-weight:700;
+    cursor:pointer;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+}
+
+.accordion .questions label {
+    display:block;
+    font-size:16px;
+    line-height:16px;
+    color:#FFFFFF;
+    font-weight:700;
+    cursor:pointer;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+}
+
+.accordion ul li label {
+  background:rgb(51,51,51);
+}
+
+.accordion .questions ul li label {
+  background-color: #1A1A1A;
+}
+
+.accordion ul li label:hover, .accordion [type=checkbox]:checked ~ label {
+    background:rgb(51,51,51);
+    color:#FFF;
+}
+
+.accordion .questions ul li label:hover, .accordion .questions [type=checkbox]:checked ~ label {
+    background: #1A1A1A;
+}
+
+.accordion .questions, .accordion .questions .answer {
+    padding:2px 10px;
+    overflow:hidden;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+}
+
+.accordion .questions p {
+    color:rgb(214,214,214);
+    margin:10px;
+    line-height: 1.5;
+}
+
+/* Vertical */
+.vertical ul li {
+    overflow:hidden;
+    margin:0 0 1px;
+}
+.vertical ul li label {
+    padding:10px;
+}
+.vertical [type=checkbox]:checked ~ label {
+    border-bottom:0;
+}
+.vertical ul li .questions {
+    height:0px;
+}
+.vertical .questions ul li .answer{
+    height:0px;
+}
+.vertical [type=checkbox]:checked ~ label ~ .questions {
+    height:auto;
+}
+
+.vertical .questions [type=checkbox]:checked ~ label ~ .answer {
+    height:auto;
+}
+
+.header {
+  background:#000000;
+  width: 100%;
+  height: 59px;
+}
+
+.accordion p a, .accordion p a:active, .accordion p a:visited {
+  color: rgb(201,201,201);
+  text-decoration: underline;
+}
+
+.logo {
+  position: relative;
+  width: 108px;
+  height: 34px;
+  left: 15%;
+  top: 13px;
+}
+
+.title-bar {
+  height: 102px;
+  width: 100%;
+  background-color: rgb(51, 51, 51);
+}
+
+.title-text {
+  position: relative;
+  font-family:Kiro-regular-web,Helvetica Neue,Arial;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  left: 15%;
+  top: 22px;
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="header">
+  <img class="logo" src="./images/logo.png" href="www.google.ca"></img>
+</div>
+<div class="title-bar">
+  <span class="title-text">Help/FAQs</span>
+</div>
+
+<div class="accordion vertical">
+    <ul>
+        <li>
+            <input type="checkbox" id="checkbox-1" name="checkbox-accordion" checked />
+            <label for="checkbox-1">Learn about CraveTV</label>
+            <div class="questions">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-1" name="checkbox-question" />
+                    <label for="checkbox-1-1">&bull; What is CraveTV?</label>
+                      <div class="answer">
+                        <p>Created for TV lovers and devoted to television, CraveTV is Canada&#039;s premium on demand subscription video streaming service, providing the most robust lineup of hit television content in the country. From TV&#039;s most-acclaimed dramas and beloved comedies to documentaries, music, and factual programming, within months of launch CraveTV will feature more than 10,000 hours of TV programming, with more than 350 unique TV titles. Designed to complement traditional television, the video service gives viewers the ability to watch thousands of hours of hit past and present TV series.</p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-2" name="checkbox-question" />
+                    <label for="checkbox-1-2">&bull; Who is CraveTV for?</label>
+                      <div class="answer">
+                        <p>CraveTV is for everybody who loves TV and has at least a basic subscription with a participating television service provider.</p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-3" name="checkbox-question" />
+                    <label for="checkbox-1-3">&bull; How do I subscribe to CraveTV?</label>
+                      <div class="answer">
+                        <p>You will need to subscribe to CraveTV via your television service provider. Currently, CraveTV is provided by Bell TV, Bell Aliant, and Telus, with more coming soon.</p>
+
+                        <p>If you are a subscriber of The Movie Network or Movie Central with Bell TV, CraveTV is already included with your TV package, at no additional cost. Simply use your online username and password to sign in.</br>
+                        If you are a subscriber of The Movie Network with Bell Aliant, CraveTV is already included with your TV package, at no additional cost. Simply use your online username and password to sign in.</p>
+
+
+                        <p>If you would like to add CraveTV to your TV package, please contact your service provider at:</p>
+
+                        <p>&bull;Bell TV: 1.888.759.3474 or go to <a href="http://www.mybell.bell.ca" target="_blank">www.mybell.bell.ca</a> </br>
+                        &bull;Telus: Alberta or British Columbia residents: 310.6988 / Qu&#233;bec residents: 310.1212 </br>
+                        &bull;Bell Aliant FibreOp: 1.866.FIBREOP (342.7367) </br>
+                        &bull;Bell FibreOp: 1.866.FIBREOP (342.7367) </br>
+                        &bull;NorthernTel: 1.866.FIBREOP (342.7367)
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-4" name="checkbox-question" />
+                    <label for="checkbox-1-4">&bull; Will subscribers be able to cancel at any time?</label>
+                      <div class="answer">
+                        <p>Yes - you can cancel at any time by calling your television service provider.</p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-5" name="checkbox-question" />
+                    <label for="checkbox-1-5">&bull; My television provider is not listed, what can I do to get CraveTV offered?</label>
+                      <div class="answer">
+                        <p>We are in discussion with all television service providers to launch CraveTV. We greatly appreciate your interest in our product. Please feel free to call your service provider to ask for CraveTV.</p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-6" name="checkbox-question" />
+                    <label for="checkbox-1-6">&bull; How much does CraveTV cost?</label>
+                      <div class="answer">
+                        <p>The standalone retail price for CraveTV is only $4 plus tax per month. However, some television providers may bundle the product together with certain television packages. For example, Bell and Bell Aliant are including CraveTV in a subscription to The Movie Network and Movie Central at no additional cost.</p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-7" name="checkbox-question" />
+                    <label for="checkbox-1-7">&bull; What channel is CraveTV on my Bell, Telus, or Bell Aliant set top box?</label>
+                      <div class="answer">
+                        <p>&bull; Bell Fibe TV: Press the On Demand button on your remote or go to channel 310/1310</br>
+                          &bull; Telus: Press the On Demand button on your remote or go to channel 411</br>
+                          &bull; Bell Aliant: Press the On Demand button on your remote or go to channel 523
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-8" name="checkbox-question" />
+                    <label for="checkbox-1-8">&bull; Are there commercials in CraveTV?</label>
+                      <div class="answer">
+                        <p>No, CraveTV is completely commercial-free.</p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-9" name="checkbox-question" />
+                    <label for="checkbox-1-9">&bull; Can I find out what catalogue content there is before I subscribe?</label>
+                      <div class="answer">
+                        <p>Yes – You don't need a subscription to browse or search the full CraveTV catalogue. Visit <a href="www.cravetv.ca" target="_blank">www.cravetv.ca  </a> or download the app from the Apple App Store&#8480; or Google Play&#153; store. 
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-10" name="checkbox-question" />
+                    <label for="checkbox-1-10">&bull; When is the programming updated on CraveTV?</label>
+                      <div class="answer">
+                        <p>The CraveTV programming team is always working hard to bring CraveTV subscribers the best television content possible. Look for new programming to be added on a weekly basis, usually on Fridays.</p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-11" name="checkbox-question" />
+                    <label for="checkbox-1-11">&bull; Can I watch programs on CraveTV with closed-captioning? </label>
+                      <div class="answer">
+                        <p>CraveTV programs can be viewed on your set-top box with closed-captions. This feature is coming soon for iOS, Android, and Web.</p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-1-12" name="checkbox-question" />
+                    <label for="checkbox-1-12">&bull; Can I watch programs on CraveTV in different languages? </label>
+                      <div class="answer">
+                        <p>CraveTV programming is available in English only.</p>
+                      </div>
+                  </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" id="checkbox-2" name="checkbox-accordion" />
+            <label for="checkbox-2">Signing In</label>
+            <div class="questions">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="checkbox-2-1" name="checkbox-question" />
+                    <label for="checkbox-2-1">&bull; I am having problems signing in. Whom should I contact?</label>
+                      <div class="answer">
+                        <p>Please contact your TV service provider at:</br></br>
+
+                          &bull; Bell TV: 1.888.759.3474 or <a href="http://mybell.bell.ca/Registration" target="_blank">mybell.bell.ca/Registration</a> </br>
+                          &bull; Telus: Alberta or British Columbia residents: 310.6988 / Qu&#233;bec residents: 310.1212 or <a href="http://telus.com/gethelp" target="_blank">telus.com/gethelp</a></br>
+                          &bull; Bell Aliant FibreOp: 1.866.FIBREOP (342.7367) or <a href="http://bellaliant.net/myaccount" target="_blank">bellaliant.net/myaccount</a></br>
+                          &bull; Bell FibreOp: 1.866.FIBREOP (342.7367) or <a href="http://fibreop.ca/myaccount" target="_blank">fibreop.ca/myaccount</a></br>
+                          &bull; NorthernTel: 1.866.FIBREOP (342.7367) or <a href="http://fibreop.ca/myaccount" target="_blank">fibreop.ca/myaccount</a>
+
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-2-2" name="checkbox-question" />
+                    <label for="checkbox-2-2">&bull; I have forgotten my username and password. Whom should I contact?</label>
+                      <div class="answer">
+                        <p>You can contact us at <a href="mailto:help@cravetv.ca" target="_blank">help@cravetv.ca</a> or call us at 1-844-40CRAVE (27283) but it will be faster if you contact your TV service provider at:</br></br>
+
+                         &bull; Bell TV: 1.888.759.3474 or <a href="http://mybell.bell.ca/ForgotPassword" target="_blank">mybell.bell.ca/ForgotPassword </a></br>
+                         &bull; Telus: Alberta or British Columbia residents: 310.6988 / Qu&#233;bec residents: 310.1212 or <a href="http://telus.com/gethelp" target="_blank">telus.com/gethelp </a></br>
+                         &bull; Bell Aliant FibreOp: 1.866.FIBREOP (342.7367) or <a href="http://bellaliant.net/myaccount" target="_blank">bellaliant.net/myaccount </a></br>
+                         &bull; Bell FibreOp: 1.866.FIBREOP (342.7367) or <a href="http://fibreop.ca/myaccount" target="_blank">fibreop.ca/myaccount </a></br>
+                         &bull; NorthernTel: 1.866.FIBREOP (342.7367) or <a href="http://fibreop.ca/myaccount" target="_blank">fibreop.ca/myaccount </a>
+                        </p>
+                      </div>
+                  </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" id="checkbox-3" name="checkbox-accordion" />
+            <label for="checkbox-3">Features</label>
+            <div class="questions">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-1" name="checkbox-question" />
+                    <label for="checkbox-3-1">&bull; Which devices does CraveTV support?</label>
+                      <div class="answer">
+                        <p>
+                        CraveTV supports the following: </br>
+                        &bull; iPad, iPod and iPhone running iOS 7.1+ </br>
+                        &bull; Android tablets and smartphones running version 4.0+ </br>
+                        &bull; Mac: 10.6+: Browsers: Safari, Firefox and Chrome </br>
+                        &bull; Windows: IE9+, Firefox, Chrome </br></br>
+
+                        Please note that CraveTV does not support web browsers on your mobile device.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-2" name="checkbox-question" />
+                    <label for="checkbox-3-2">&bull; How can I watch CraveTV on my TV?</label>
+                      <div class="answer">
+                        <p>
+                          In addition to being able to access CraveTV on demand on your television's set-top box, CraveTV supports AirPlay and Chromecast. Using a mobile device or computer, download the CraveTV app from either the Apple App Store&#8480; or the Google Play&#153; store, connect your Apple TV or Chromecast*, and watch! (*Chromecast support on mobile devices is coming soon!)</p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-3" name="checkbox-question" />
+                    <label for="checkbox-3-3">&bull; How can I watch CraveTV on my computer?</label>
+                      <div class="answer">
+                        <p>
+                          You can watch CraveTV from your computer at <a href="http://www.cravetv.ca" target="_blank">www.cravetv.ca</a>.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-4" name="checkbox-question" />
+                    <label for="checkbox-3-4">&bull; How can I watch CraveTV on my mobile device or tablet?</label>
+                      <div class="answer">
+                        <p>
+                          To watch CraveTV from your mobile device or tablet, please download the CraveTV app from either the Canadian Apple App Store&#8480; or the Canadian Google Play&#153; store. 
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-5" name="checkbox-question" />
+                    <label for="checkbox-3-5">&bull; Does CraveTV support AirPlay and Chromecast?</label>
+                      <div class="answer">
+                        <p>
+                          CraveTV supports AirPlay. Chromecast is supported when using the Chrome browser on your desktop. Chromecast support for mobile devices is coming soon.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-6" name="checkbox-question" />
+                    <label for="checkbox-3-6">&bull; Does CraveTV have support for other devices?</label>
+                      <div class="answer">
+                        <p>
+                          New platforms are coming in early 2015.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-7" name="checkbox-question" />
+                    <label for="checkbox-3-7">&bull; Can I play video on CraveTV from more than one device at a time?</label>
+                      <div class="answer">
+                        <p>
+                          Yes, members of a household can stream CraveTV concurrently on up to two devices, and also watch content via the set-top box at the same time.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-8" name="checkbox-question" />
+                    <label for="checkbox-3-8">&bull; How many devices can be linked to one CraveTV account?</label>
+                      <div class="answer">
+                        <p>
+                          You may have up to five devices connected to your CraveTV account at any time.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-9" name="checkbox-question" />
+                    <label for="checkbox-3-9">&bull; I am getting a "too many devices" error message. How do I manage my devices?</label>
+                      <div class="answer">
+                        <p>
+                          Please go to <a href="http://www.cravetv.ca" target="_blank">www.cravetv.ca</a> on your computer or open the CraveTV app on your tablet device, you can de-register devices through the Settings section under "Account".
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-10" name="checkbox-question" />
+                    <label for="checkbox-3-10">&bull; Can I use CraveTV when travelling in Canada and the U.S.?</label>
+                      <div class="answer">
+                        <p>
+                          While subscribers to CraveTV can use the service anywhere in Canada on their mobile device or computer, they won't be able watch any video when outside Canada as CraveTV content has been licensed exclusively for the Canadian market.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-11" name="checkbox-question" />
+                    <label for="checkbox-3-11">&bull; How do you search for content on CraveTV? </label>
+                      <div class="answer">
+                        <p>
+                          You can find content on CraveTV through a predictive search field, browsing by titles, or via the "Everything" category in the menu.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-12" name="checkbox-question" />
+                    <label for="checkbox-3-12">&bull; Are programs available on CraveTV in HD?</label>
+                      <div class="answer">
+                        <p>
+                          Yes. CraveTV strives to offer users the best possible viewing experience. The video quality we deliver will depend on the content and your Internet connection and device. We'll automatically detect your connection speed and send you the highest quality stream your connection can support.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-13" name="checkbox-question" />
+                    <label for="checkbox-3-13">&bull; Where can I see ratings for programs on CraveTV?</label>
+                      <div class="answer">
+                        <p>
+                          Ratings for programs on CraveTV will appear on the program's info page on all platforms.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-14" name="checkbox-question" />
+                    <label for="checkbox-3-14">&bull; Why is there so much content in my "Recently Watched" section? Will this interfere with or slow down the product in any way?
+                    </label>
+                      <div class="answer">
+                        <p>
+                          CraveTV offers a "Recently Watched" feature, which allows users to easily see the programs they have already watched. The number of items in this section will not interfere with your CraveTV experience in any way.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-15" name="checkbox-question" />
+                    <label for="checkbox-3-15">&bull; What is the difference between "My Cravings" and "Recently Watched"?</label>
+                      <div class="answer">
+                        <p>
+                          The "My Cravings" section saves the last episode of the series you are watching, or adds the next episode available for the series you have been enjoying. If you stop watching the episode on one device, you can pick up where you left off on another.</p>
+
+                          <p>
+                          "Recently Watched" shows you all the content you have enjoyed so far.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-3-16" name="checkbox-question" />
+                    <label for="checkbox-3-16">&bull; Does CraveTV have parental controls?</label>
+                      <div class="answer">
+                        <p>
+                          Yes, CraveTV has parental controls that allow you to require a PIN when viewing content rated above a particular level. You can find this in "Account Settings", under "Parental Controls". The PIN can be changed at any time, and the Parental Controls setting will be applicable for your account across you mobile devices and computer.</p>
+                          <p>
+                          Please note that any parental controls settings on your TV provided through your service provider will not apply to the CraveTV app or website.
+                        </p>
+                      </div>
+                  </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" id="checkbox-4" name="checkbox-accordion" />
+            <label for="checkbox-4">Technical - General</label>
+            <div class="questions">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-1" name="checkbox-question" />
+                    <label for="checkbox-4-1">&bull; Why am I getting a "video playback error” on my iOS device, Android device or on my Apple TV?</label>
+                      <div class="answer">
+                        <p>
+                        This message will be displayed when you try to watch CraveTV video content on an iOS, Android or Apple TV device that does not have an official release of the OS (operating system) software. CraveTV only supports official releases due to Content Provider restrictions. "Jailbroken” devices are not supported.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-2" name="checkbox-question" />
+                    <label for="checkbox-4-2">&bull; Will I have the option to select video quality so I can ensure I don't go over my monthly Internet bandwidth allocation?</label>
+                      <div class="answer">
+                        <p>
+                          No, CraveTV was designed for the best TV watching experience possible. It automatically detects your connection speed and sends you the highest quality stream your connection can support. If you have concerns about video streaming consuming your Internet bandwidth allocation, you have the option to use your set-top box. Or contact your Internet service provider to enquire about increasing your monthly usage limit.  
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-3" name="checkbox-question" />
+                    <label for="checkbox-4-3">&bull; Does CraveTV require subscribers to purchase any additional equipment? </label>
+                      <div class="answer">
+                        <p>
+                          CraveTV will be available as an app on most iOS and Android devices, computers, and On Demand via your set-top box. The app is free to download for anyone with a supported device or you can access it via the website. CraveTV can also be accessed via the set-top box of participating television service providers.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-4" name="checkbox-question" />
+                    <label for="checkbox-4-4">&bull; Will streaming content on CraveTV use my cellular data plan?</label>
+                      <div class="answer">
+                        <p>
+                          Use of the CraveTV app on your mobile device via Wi-Fi will count against your Internet data plan when used at home, but not your cellular data plan. If you are using a free Wi-Fi network outside the home, the service will not count to your home Internet data plan or cellular data plan. If you stream content using data, however, then it will count towards your mobile data plan.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-5" name="checkbox-question" />
+                    <label for="checkbox-4-5">&bull; Will streaming content on CraveTV consume my monthly Internet bandwidth allocation? </label>
+                      <div class="answer">
+                        <p>
+                          Yes, watching CraveTV on any device connected to your home network or Wi-Fi will consume bandwidth, similar to other streaming services. If you have concerns about video streaming consuming your Internet bandwidth allocation, you have the option to use your set-top box. Or contact your Internet service provider to enquire about increasing your monthly usage limit.  
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-6" name="checkbox-question" />
+                    <label for="checkbox-4-6">&bull; How much bandwidth will I use while streaming video on CraveTV?</label>
+                      <div class="answer">
+                        <p>
+                          Streaming video will use between 0.2 and 0.9 GB per hour of viewing.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-7" name="checkbox-question" />
+                    <label for="checkbox-4-7">&bull; Will CraveTV use my personal information/data?</label>
+                      <div class="answer">
+                        <p>
+                          CraveTV will never compromise or share personal information received from our customers. Any tracking for measurement purposes is done at an aggregate level and not at an individual one.</br></br>
+
+                          We do require a recovery e-mail address to be used only for implementation of Parental Controls (if you forget your PIN). </br><br>
+
+                          Any and all use of customer information will comply with our Privacy Policy, which can be accessed at <a href="http://support.bell.ca/Billing-and-Accounts/Security_and_privacy/How_does_Bell_respect_my_privacy" target="_blank">http://support.bell.ca/Billing-and-Accounts/Security_and_privacy/How_does_Bell_respect_my_privacy </a>.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-8" name="checkbox-question" />
+                    <label for="checkbox-4-8">&bull; What are the system requirements to access CraveTV from my computer?</label>
+                      <div class="answer">
+                        <p>
+                          For an optimal video viewing experience you should have a high speed Internet connection. The speed of your connection will determine the quality of the video, as well as how fast it takes for your movie or episode to begin playing on your computer. </br></br>
+
+                          If you are a Windows user, CraveTV requires you to have a least Windows XP with Service Pack 2. If you are a Mac user, you must have Mac OS 10.6 or better. </br></br>
+
+                          CraveTV requires the Adobe&#174; Flash&#174; Player to stream video content. If you do not have the proper version of the Adobe&#174; Flash&#174; Player installed on your computer you will be required to update it before being able to sign in or watch any video.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-9" name="checkbox-question" />
+                    <label for="checkbox-4-9">&bull; Do I need to disable my anti-virus software or any firewalls in order to access CraveTV on my computer? </label>
+                      <div class="answer">
+                        <p>
+                          CraveTV operates using commonly accessible web protocols (HTTP, HTTPS) on standard ports for which most firewalls will allow access. If you have custom security in place, it may affect the ability of CraveTV to properly function. If you have installed a firewall at home, simply accept the request from your firewall asking if it's okay to access CraveTV. To make CraveTV an exception to your computer's firewall, go to your Internet service provider's online Help section and follow the instructions. For firewalls at work, please contact your company's Information Technology department. </br></br>
+
+                          If you require additional assistance, please contact <a href="mailto:help@cravetv.ca" target="_blank">help@cravetv.ca</a> or call us at 1-844-40CRAVE (27283)
+
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-10" name="checkbox-question" />
+                    <label for="checkbox-4-10">&bull; Do I need to adjust any web browser security settings on my computer to watch CraveTV?</label>
+                      <div class="answer">
+                        <p>
+                          Yes.  When you log in, you are logging in with your TV Service Provider username and password, and because we don't ever see your username or password, to watch CraveTV, your browser must enable "Third Party Cookies,” and must have the ability to use secure connections. Other than that, standard browser settings will work fine. The following links will provide more details: </br>
+                          &bull; <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies" target="_blank">Remove third party cookies on Firefox </a></br>
+                          &bull; <a href="https://support.google.com/accounts/answer/61416?hl=en" target="_blank">Remove third party cookies on Chrome </a></br>
+                          &bull; <a href="http://windows.microsoft.com/en-ca/windows7/block-enable-or-allow-cookies" target="_blank">Remove third party cookies on Internet Explorer </a></br>
+                          &bull; <a href="http://support.apple.com/kb/PH17191?viewlocale=en_US&locale=en_US" target="_blank">Remove third party cookies on Safari </a></br>
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-11" name="checkbox-question" />
+                    <label for="checkbox-4-11">&bull; Is special software needed to watch CraveTV on a computer?</label>
+                      <div class="answer">
+                        <p>
+                          No special software is required, just a standard Web browser and the Adobe&#174; Flash&#174; Player. <a href="http://get.adobe.com/flashplayer/" target="_blank">Install the latest Adobe&#174; Flash&#174; Player.</a>
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-12" name="checkbox-question" />
+                    <label for="checkbox-4-12">&bull; Do I need a specific web browser to access CraveTV? </label>
+                      <div class="answer">
+                        <p>
+                          CraveTV will work on the most up-to-date versions of Internet Explorer, Firefox, Chrome, and Safari. </br></br>
+
+                          Steps to download:</br>
+                          Go to the browser's home page that you are interested in updating:</br>
+                          &bull; Chrome:  <a href="http://www.google.com/chrome" target="_blank">www.google.com/chrome</a>, then select the "Download Now” button</br>
+                          &bull; Firefox:  <a href="http://www.mozilla.org/firefox/new" target="_blank">www.mozilla.org/firefox/new</a> , then select the "Download a Fresh Copy” link</br>
+                          &bull; Internet Explorer:  <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">http://windows.microsoft.com/en-us/internet-explorer/download-ie</a>, then select the "Get Internet Explorer” button</br>
+                          &bull; Safari:  <a href=">http://support.apple.com/downloads/#safari" target="_blank">http://support.apple.com/downloads/#safari</a>
+
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-4-13" name="checkbox-question" />
+                    <label for="checkbox-4-13">&bull; Can I set video quality settings on a per device basis? </label>
+                      <div class="answer">
+                        <p>
+                          No, CraveTV will optimize its video quality according to your device's ability and the speed of the connection you use.
+                        </p>
+                      </div>
+                  </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <input type="checkbox" id="checkbox-5" name="checkbox-accordion" />
+            <label for="checkbox-5">Troubleshooting</label>
+            <div class="questions">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="checkbox-5-1" name="checkbox-question" />
+                    <label for="checkbox-5-1">&bull; I'm unable to access the sign-in page. What should I do?</label>
+                      <div class="answer">
+                        <p>
+                        On the web, the sign-in page is available by clicking the "Sign In” button at the top right of the page. In apps, it is accessed through the menu at the top left of the screen. If you continue to experience difficulty, most errors can be cleared by either closing all browser windows or hard-closing the app and re-starting it. To hard-close the app on an iOS device, press the Home button twice, then swipe upwards on the app to close it. On Android, use the Android menu button on the bottom of the screen and swipe the app away to close it.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-5-2" name="checkbox-question" />
+                    <label for="checkbox-5-2">&bull; I'm unable to download or install the application. What should I do?</label>
+                      <div class="answer">
+                        <p>
+                          The app is available through the Canadian Google Play&#153; store or the Canadian Apple App Store&#8480;. Please make sure you are checking the Canadian version of the stores and you do not have any controls set up on your account that restrict access to apps with content meant for mature audiences. If you are still having difficulty with downloading the app, please contact Google or Apple Help Info for further assistance.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-5-3" name="checkbox-question" />
+                    <label for="checkbox-5-3">&bull; I am having problems signing in. Whom should I contact?</label>
+                      <div class="answer">
+                        <p>Please contact your TV service provider at:</br></br>
+
+                          &bull; Bell TV: 1.888.759.3474 or <a href="http://mybell.bell.ca/Registration" target="_blank">mybell.bell.ca/Registration</a> </br>
+                          &bull; Telus: Alberta or British Columbia residents: 310.6988 / Qu&#233;bec residents: 310.1212 or <a href="http://telus.com/gethelp" target="_blank">telus.com/gethelp</a></br>
+                          &bull; Bell Aliant FibreOp: 1.866.FIBREOP (342.7367) or <a href="http://bellaliant.net/myaccount" target="_blank">bellaliant.net/myaccount</a></br>
+                          &bull; Bell FibreOp: 1.866.FIBREOP (342.7367) or <a href="http://fibreop.ca/myaccount" target="_blank">fibreop.ca/myaccount</a></br>
+                          &bull; NorthernTel: 1.866.FIBREOP (342.7367) or <a href="http://fibreop.ca/myaccount" target="_blank">fibreop.ca/myaccount</a>
+
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-5-4" name="checkbox-question" />
+                    <label for="checkbox-5-4">&bull; I have forgotten my username and password. Whom should I contact?</label>
+                      <div class="answer">
+                        <p>You can contact us at <a href="mailto:help@cravetv.ca" target="_blank">help@cravetv.ca</a> or call us at 1-844-40CRAVE (27283) but it will be faster if you contact your TV service provider at:</br></br>
+
+                         &bull; Bell TV: 1.888.759.3474 or <a href="http://mybell.bell.ca/ForgotPassword" target="_blank">mybell.bell.ca/ForgotPassword </a></br>
+                         &bull; Telus: Alberta or British Columbia residents: 310.6988 / Qu&#233;bec residents: 310.1212 or <a href="http://telus.com/gethelp" target="_blank">telus.com/gethelp </a></br>
+                         &bull; Bell Aliant FibreOp: 1.866.FIBREOP (342.7367) or <a href="http://bellaliant.net/myaccount" target="_blank">bellaliant.net/myaccount </a></br>
+                         &bull; Bell FibreOp: 1.866.FIBREOP (342.7367) or <a href="http://fibreop.ca/myaccount" target="_blank">fibreop.ca/myaccount </a></br>
+                         &bull; NorthernTel: 1.866.FIBREOP (342.7367) or <a href="http://fibreop.ca/myaccount" target="_blank">fibreop.ca/myaccount </a>
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-5-5" name="checkbox-question" />
+                    <label for="checkbox-5-5">&bull; I am in Canada but CraveTV says that I am outside Canada. What can I do?</label>
+                      <div class="answer">
+                        <p>
+                          Please contact us at <a href="mailto:help@cravetv.ca" target="_blank">help@cravetv.ca</a> or call us at 1-844-40CRAVE (27283).
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-5-6" name="checkbox-question" />
+                    <label for="checkbox-5-6">&bull; I'm unable to access the website. What should I do?</label>
+                      <div class="answer">
+                        <p>
+                          Please check that your browser has a working Internet connection by browsing a website that you frequently use. If you are able to visit other websites but not CraveTV, please check that you are accessing the correct address (<a href="http://www.cravetv.ca" target="_blank">www.cravetv.ca</a>). If the site is temporarily unavailable, please check back later. Or contact <a href="mailto:help@cravetv.ca" target="_blank">help@cravetv.ca</a> or call us at 1-844-40CRAVE (27283).
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-5-7" name="checkbox-question" />
+                    <label for="checkbox-5-7">&bull; The player functions aren't working. What should I do?</label>
+                      <div class="answer">
+                        <p>
+                          Please try refreshing your browser, or if in an app, hard-close the app and try again. If it still doesn't work, contact <a href="mailto:help@cravetv.ca" target="_blank">help@cravetv.ca</a> or call us at 1-844-40CRAVE (27283).
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-5-8" name="checkbox-question" />
+                    <label for="checkbox-5-8">&bull; Some of the artwork isn't appearing on the player. What should I do?</label>
+                      <div class="answer">
+                        <p>
+                          The video should still play regardless of whether or not the artwork is present. However, the absence of artwork could indicate a problem with your Internet connection that will also prevent video from playing.
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-5-9" name="checkbox-question" />
+                    <label for="checkbox-5-9">&bull; When I try to watch a program, the video keeps skipping, stopping, or giving me an error message. Why is this happening?</label>
+                      <div class="answer">
+                        <p>
+                          All video in CraveTV is tested before it is released into production so the most common cause of skipping in video is the condition of your Internet connection. However, if you have watched multiple videos and only experienced problems with one, please contact <a href="mailto:help@cravetv.ca" target="_blank">help@cravetv.ca</a> or call us at 1-844-40CRAVE (27283). If you get an error message, please report it to us, providing as much information as possible so that we can resolve the problem.
+
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-5-10" name="checkbox-question" />
+                    <label for="checkbox-5-10">&bull; I've downloaded the app but it won't open or it keeps crashing. What should I do?</label>
+                      <div class="answer">
+                        <p>
+                          There may be something wrong with the installation on your device. Please uninstall the app completely, then install it again. If you continue to experience difficulty, please contact <a href="mailto:help@cravetv.ca" target="_blank">help@cravetv.ca</a> or call us at 1-844-40CRAVE (27283).
+                        </p>
+                      </div>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="checkbox-5-11" name="checkbox-question" />
+                    <label for="checkbox-5-11">&bull; The parental controls aren't working. What should I do?</label>
+                      <div class="answer">
+                        <p>
+                          We hold parents' need to care for their children in the highest regard. If the parental controls provided in CraveTV are not working as you would expect them to, please contact <a href="mailto:help@cravetv.ca" target="_blank">help@cravetv.ca</a> or call us at 1-844-40CRAVE (27283) and indicate what problems you have encountered.
+                        </p>
+                      </div>
+                  </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
